@@ -15,7 +15,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories("com.utfpr.backendCategoriaMusicaSpringApplication.repository")
+@EnableJpaRepositories("com.utfpr.backend_categoria_musica_spring.repository")
 @EnableTransactionManagement
 public class SpringDataConfig {
 
@@ -26,7 +26,7 @@ public class SpringDataConfig {
 
         dataSource.setUsername("root");
         dataSource.setPassword("senharoot");
-        dataSource.setJdbcUrl("jdbc:h2:men:test");
+        dataSource.setJdbcUrl("jdbc:h2:mem:test");
         dataSource.setDriverClassName("org.h2.Driver");
         return dataSource;
     }
@@ -40,7 +40,7 @@ public class SpringDataConfig {
 
         factoryBean.setDataSource(dataSource());
         factoryBean.setJpaVendorAdapter(vendorAdapter);
-        factoryBean.setPackagesToScan("com.utfpr.backendCategoriaMusicaSpringApplication.entity");
+        factoryBean.setPackagesToScan("com.utfpr.backend_categoria_musica_spring.entity");
         factoryBean.afterPropertiesSet();
 
         return factoryBean.getObject();

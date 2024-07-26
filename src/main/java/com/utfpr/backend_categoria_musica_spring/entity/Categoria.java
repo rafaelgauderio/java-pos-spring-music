@@ -13,7 +13,6 @@ public class Categoria {
     @Column(name= "cod_categoria", nullable = false)
     private Long id;
 
-    @OneToMany
     @Column(name = "desc_categoria", length = 50)
     private String descCategoria;
 
