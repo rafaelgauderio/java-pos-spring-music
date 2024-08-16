@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table (name = "musica")
+@Table (name = "musicas")
 @Data
 public class Musica {
 
@@ -12,13 +12,16 @@ public class Musica {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "cod_musica", nullable = false)
     private Long id;
+
+    @Column(name="duracao_musica")
     private Integer duracao;
 
-    @Column(length = 100)
+    @Column(name = "titulo_musica", length = 100)
     private String titulo;
 
+    //many musics, one category
     @ManyToOne
-    @JoinColumn(name="cod_categoria", nullable = false)
+    @JoinColumn(name="cod_categoria_musica", nullable = false)
     private Categoria categoria;
 
 }
