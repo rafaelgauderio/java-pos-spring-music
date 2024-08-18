@@ -45,6 +45,26 @@ public class BackendCategoriaMusicaSpringApplication {
 				log.info(nickname.toString());
 			}
 
+
+
+			log.info("");
+			log.info("");
+			log.info("===========Encontrar Musica Luiza - JPQL");
+			Musica musica01 = musicaService.findMusica("Luiza");
+			log.info(musica01.toString());
+
+			log.info("");
+			log.info("");
+			log.info("===========Encontrar Musica Gentileza - Palavras Chaves");
+			Musica musica02 = musicaService.findMusica("Gentileza");
+			log.info(musica02.toString());
+
+			log.info("");
+			log.info("");
+			log.info("===========Encontrar Musica Vira-vira- Palavras Chaves");
+			Musica musica03 = musicaService.findMusicaByKeyWord("Vira-vira");
+			log.info(musica03.toString());
+
 		};
 	}
 }

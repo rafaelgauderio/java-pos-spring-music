@@ -21,4 +21,12 @@ public class MusicaService {
         musicaList = musicaRepository.findAll();
         return musicaList;
     }
+
+    public Musica findMusica(String titulo) {
+        return musicaRepository.encontraMusicaTitulo(titulo);
+    }
+
+    public Musica findMusicaByKeyWord(String titulo) {
+        return musicaRepository.findByTitulo(titulo);
+    }
 }
