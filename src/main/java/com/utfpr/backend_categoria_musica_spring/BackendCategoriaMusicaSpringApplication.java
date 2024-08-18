@@ -65,6 +65,26 @@ public class BackendCategoriaMusicaSpringApplication {
 			Musica musica03 = musicaService.findMusicaByKeyWord("Vira-vira");
 			log.info(musica03.toString());
 
+			log.info("");
+			log.info("");
+			log.info("===========Listagem Musicas com duracao maior que 300");
+			for(Musica nickname : musicaService.listarMusicasComDuracaoMaiorQue(400))  {
+				log.info(nickname.toString());
+			}
+
+			log.info("");
+			log.info("");
+			log.info("===========Encontrar musica com MAIOR duracao");
+			Musica musica04 = musicaService.findFirstMusicWithGreaterDuration();
+			log.info(musica04.toString());
+
+			log.info("");
+			log.info("");
+			log.info("===========Encontrar musica com MENOR duracao");
+			Musica musica05 = musicaService.findFirstMusicaWithShorterDuration();
+			log.info(musica05.toString());
+
+
 		};
 	}
 }

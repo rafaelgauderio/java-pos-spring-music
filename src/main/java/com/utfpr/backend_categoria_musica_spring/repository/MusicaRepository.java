@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface MusicaRepository extends JpaRepository <Musica, Long > {
 
@@ -14,4 +16,16 @@ public interface MusicaRepository extends JpaRepository <Musica, Long > {
 
     // usando palavras chaves
     Musica findByTitulo(String titulo);
+
+    //query nativa
+    @Query(value="SELECT * " +
+            "FROM Musica " +
+            "WHERE duracao > ?1", nativeQuery = true)
+    List<Musica> listaMusicasComDuracaoMaiorQue(Integer duracao);
+
+    // usando palavras chave
+    Musica findFirstByOrderByDuracaoDesc();
+
+    //usando palavras chave
+    Musica findFirstByOrderByDuracaoAsc();
 }

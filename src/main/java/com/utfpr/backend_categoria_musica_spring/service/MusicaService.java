@@ -29,4 +29,19 @@ public class MusicaService {
     public Musica findMusicaByKeyWord(String titulo) {
         return musicaRepository.findByTitulo(titulo);
     }
+
+    public List<Musica> listarMusicasComDuracaoMaiorQue (Integer duracao) {
+        return musicaRepository.listaMusicasComDuracaoMaiorQue(duracao);
+    }
+
+    // using key word
+    public Musica findFirstMusicWithGreaterDuration() {
+        return musicaRepository.findFirstByOrderByDuracaoDesc();
+    }
+
+    public Musica findFirstMusicaWithShorterDuration () {
+        return musicaRepository.findFirstByOrderByDuracaoAsc();
+    }
+
+
 }
