@@ -68,7 +68,14 @@ public class BackendCategoriaMusicaSpringApplication {
 			log.info("");
 			log.info("");
 			log.info("===========Listagem Musicas com duracao maior que 300");
-			for(Musica nickname : musicaService.listarMusicasComDuracaoMaiorQue(400))  {
+			for(Musica nickname : musicaService.listarMusicasComDuracaoMaiorQue(300))  {
+				log.info(nickname.toString());
+			}
+
+			log.info("");
+			log.info("");
+			log.info("===========Listagem Musicas com duracao maior que 450");
+			for(Musica nickname : musicaService.listarMusicasComDuracaoMaiorQue(450))  {
 				log.info(nickname.toString());
 			}
 

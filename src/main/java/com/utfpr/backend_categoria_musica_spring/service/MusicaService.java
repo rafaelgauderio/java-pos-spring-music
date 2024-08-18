@@ -34,6 +34,10 @@ public class MusicaService {
         return musicaRepository.listaMusicasComDuracaoMaiorQue(duracao);
     }
 
+    public List<Musica> listarMusicasComDuracaoMaiorQueUsandoQueryJPQL(Integer duracao) {
+        return musicaRepository.listMusicasComDuracaoMaiorQueUsingJPQL(510);
+    }
+
     // using key word
     public Musica findFirstMusicWithGreaterDuration() {
         return musicaRepository.findFirstByOrderByDuracaoDesc();
@@ -42,6 +46,7 @@ public class MusicaService {
     public Musica findFirstMusicaWithShorterDuration () {
         return musicaRepository.findFirstByOrderByDuracaoAsc();
     }
+
 
 
 }

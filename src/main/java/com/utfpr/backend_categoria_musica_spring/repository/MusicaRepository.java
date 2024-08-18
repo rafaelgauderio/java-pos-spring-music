@@ -23,6 +23,11 @@ public interface MusicaRepository extends JpaRepository <Musica, Long > {
             "WHERE duracao > ?1", nativeQuery = true)
     List<Musica> listaMusicasComDuracaoMaiorQue(Integer duracao);
 
+    @Query(value= "SELECT music " +
+            "FROM Musica music " +
+            "WHERE duracao > ?1")
+    List<Musica> listMusicasComDuracaoMaiorQueUsingJPQL (Integer duracao);
+
     // usando palavras chave
     Musica findFirstByOrderByDuracaoDesc();
 
