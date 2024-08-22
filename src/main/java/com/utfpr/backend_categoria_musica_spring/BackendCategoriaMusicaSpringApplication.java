@@ -92,7 +92,7 @@ public class BackendCategoriaMusicaSpringApplication {
 			Musica musica05 = musicaService.findFirstMusicaWithShorterDuration();
 			log.info(musica05.toString());
 
-			/*
+
 			log.info("");
 			log.info("");
 			log.info("===========Chamar procedure adicionar 150 minutos de duracao em todos as músicas");
@@ -115,7 +115,6 @@ public class BackendCategoriaMusicaSpringApplication {
 				log.info(nickname.toString());
 			}
 
-			 */
 		};
 	}
 }
