@@ -48,11 +48,11 @@ public class MusicaService {
     }
 
     public void addDurationToMusic (Integer ammount) {
-        musicaRepository.procedureAddMusicDuration(200);
+        musicaRepository.procedureAddMusicDuration(ammount);
     }
 
     public void subtractionDurationOfMusic(Integer ammount) {
-        musicaRepository.procudureSubMuscDuration(100);
+        musicaRepository.procudureSubMuscDuration(ammount);
     }
 
 

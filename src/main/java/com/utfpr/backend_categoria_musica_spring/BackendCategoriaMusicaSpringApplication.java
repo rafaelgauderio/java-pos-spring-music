@@ -94,8 +94,8 @@ public class BackendCategoriaMusicaSpringApplication {
 
 			log.info("");
 			log.info("");
-			log.info("===========Chamar procedure adicionar 200 minutos de duracao em todos as músicas");
-			musicaService.addDurationToMusic(100);
+			log.info("===========Chamar procedure adicionar 150 minutos de duracao em todos as músicas");
+			musicaService.addDurationToMusic(150);
 			log.info("");
 			log.info("");
 			log.info("===========Listar dos as músicas após execucação da procedure add");

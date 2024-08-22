@@ -39,5 +39,5 @@ public interface MusicaRepository extends JpaRepository <Musica, Long > {
     void procedureAddMusicDuration (Integer ammount);
 
     @Procedure("proc_sub_music_duration")
-    void procudureSubMuscDuration(Integer ammoubt);
+    void procudureSubMuscDuration(Integer ammount);
 }
