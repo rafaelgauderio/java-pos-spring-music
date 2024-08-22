@@ -26,17 +26,19 @@ public class SpringDataConfig {
         HikariDataSource dataSource = new HikariDataSource();
 
 
-        /*
-        dataSource.setUsername("root");
-        dataSource.setPassword("senharoot");
+
+        dataSource.setUsername("sa");
+        dataSource.setPassword("");
         dataSource.setJdbcUrl("jdbc:h2:mem:test");
         dataSource.setDriverClassName("org.h2.Driver");
-        */
 
+
+        /*
         dataSource.setUsername("root");
         dataSource.setPassword("hygie123*");
         dataSource.setJdbcUrl("jdbc:mariadb://127.0.0.1:3307/dml");
         dataSource.setDriverClassName("org.mariadb.jdbc.Driver");
+        */
         return dataSource;
     }
 
@@ -44,7 +46,7 @@ public class SpringDataConfig {
     public EntityManagerFactory entityManagerFactory () {
         LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter ();
-        vendorAdapter.setGenerateDdl(false);
+        vendorAdapter.setGenerateDdl(true);
         vendorAdapter.setShowSql(false);
 
         factoryBean.setDataSource(dataSource());
@@ -66,4 +68,5 @@ public class SpringDataConfig {
 
 
 }
+
 
