@@ -32,3 +32,4 @@ INSERT INTO musica (cod_musica, cod_categoria, duracao, titulo) VALUES (22, 2, 5
 INSERT INTO musica (cod_musica, cod_categoria, duracao, titulo) VALUES (23, 2, 300, 'Beautiful day');
 INSERT INTO musica (cod_musica, cod_categoria, duracao, titulo) VALUES (24, 2, 458, 'Bullet The Blue Sky');
 INSERT INTO musica (cod_musica, cod_categoria, duracao, titulo) VALUES (25, 1, 300, 'Sua');
+

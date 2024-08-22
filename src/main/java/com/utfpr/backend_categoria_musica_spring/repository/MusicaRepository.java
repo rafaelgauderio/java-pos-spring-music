@@ -3,6 +3,7 @@ package com.utfpr.backend_categoria_musica_spring.repository;
 import com.utfpr.backend_categoria_musica_spring.entity.Musica;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -33,4 +34,10 @@ public interface MusicaRepository extends JpaRepository <Musica, Long > {
 
     //usando palavras chave
     Musica findFirstByOrderByDuracaoAsc();
+
+    @Procedure("proc_add_music_duration")
+    void procedureAddMusicDuration (Integer ammount);
+
+    @Procedure("proc_sub_music_duration")
+    void procudureSubMuscDuration(Integer ammoubt);
 }

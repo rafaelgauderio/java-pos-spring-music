@@ -47,6 +47,15 @@ public class MusicaService {
         return musicaRepository.findFirstByOrderByDuracaoAsc();
     }
 
+    public void addDurationToMusic (Integer ammount) {
+        musicaRepository.procedureAddMusicDuration(200);
+    }
+
+    public void subtractionDurationOfMusic(Integer ammount) {
+        musicaRepository.procudureSubMuscDuration(100);
+    }
+
+
 
 
 }

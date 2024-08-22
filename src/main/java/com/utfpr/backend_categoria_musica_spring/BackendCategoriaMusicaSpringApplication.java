@@ -92,7 +92,27 @@ public class BackendCategoriaMusicaSpringApplication {
 			Musica musica05 = musicaService.findFirstMusicaWithShorterDuration();
 			log.info(musica05.toString());
 
+			log.info("");
+			log.info("");
+			log.info("===========Chamar procedure adicionar 200 minutos de duracao em todos as músicas");
+			musicaService.addDurationToMusic(100);
+			log.info("");
+			log.info("");
+			log.info("===========Listar dos as músicas após execucação da procedure add");
+			for(Musica nickname : musicaService.findAllMusics()) {
+				log.info(nickname.toString());
+			}
 
+			log.info("");
+			log.info("");
+			log.info("===========Chamar procedure subtrair 100 minutos de duracao em todos as músicas");
+			musicaService.subtractionDurationOfMusic(100);
+			log.info("");
+			log.info("");
+			log.info("===========Listar dos as músicas após execucação da procedure subtraction");
+			for(Musica nickname : musicaService.findAllMusics()) {
+				log.info(nickname.toString());
+			}
 		};
 	}
 }
